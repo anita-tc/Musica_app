@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <!-- agregar imagen de fondo -->
+
+    <ImageView
+        android:id="@+id/imgFondo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/fondo_login"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="20dp"
+        android:backgroundTint="@color/white">
+
+        <LinearLayout
+            android:id="@+id/layautContenido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="28dp">
+
+            <!-- titulo de la pantalla-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="30dp"
+                android:text="Inicio de sesión"
+                android:textColor="#FF6347"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/bg_inputt"
+                android:drawableStart="@drawable/email"
+                android:drawablePadding="10dp"
+                android:hint="Correo"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColor="#333333"
+                android:textColorHint="#FFCDBF"
+                android:inputType="textEmailAddress"/>
+
+            <EditText
+                android:id="@+id/etPass"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_inputt"
+                android:drawableStart="@drawable/pass"
+                android:drawablePadding="10dp"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColor="#333333"
+                android:textColorHint="#FFCDBF" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnIngresar"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Ingresar"
+                android:background="@drawable/bg_button"
+                android:layout_marginTop="30dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+
+            <!-- opcion para registrarse -->
+
+            <TextView
+                android:id="@+id/tvCrearCuenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crear una cuenta"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#F1CB"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="40dp"/>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
